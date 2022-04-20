@@ -1,6 +1,6 @@
 
 public class TicTacToe{
-
+    public static void main(String[] Args){
     // 2d Array
     
     int[][] grid = new int[10][10];
@@ -9,10 +9,13 @@ public class TicTacToe{
         grid[x][y] = player;
     }
 
-    public boolean result (grid){
-        
-    }
+    turn(0,7,1);
+    System.out.println(grid[0][7]);
 
-    public static void main{String[] Args
+    // public boolean result (int grid){
+    //     return true;
+    // }
+
+        System.out.println("Hello World");
     }
 }
