@@ -11,3 +11,19 @@ import static java.util.stream.Collectors.joining;
 import static java.util.stream.Collectors.toList;
 
 
+public class Results{
+
+    class Result {
+
+
+
+        public void PlusMinus(){
+            
+        }
+
+    }
+
+
+    public static void main(String[] args){    
+    }
+}
