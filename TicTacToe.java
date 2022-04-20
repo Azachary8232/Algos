@@ -1,5 +1,5 @@
 
-public class Main{
+public class TicTacToe{
 
     // 2d Array
     
