@@ -11,15 +11,22 @@ import static java.util.stream.Collectors.joining;
 import static java.util.stream.Collectors.toList;
 
 
-public class 4JAVA_Practice {
-    
+public class Practice_Java {
+    public static void main(String[] args) {
+        System.out.println("Dog");
+        
+
+
+
+
+        // public String querySearch(String keywords) {
+        //     return "String";
+        // }
+
+
+
+    }
 }
 
 
 
-public String querySearch(String keywords) {
-
-
-
-    return "String";
-}
