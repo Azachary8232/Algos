@@ -11,22 +11,31 @@ import static java.util.stream.Collectors.joining;
 import static java.util.stream.Collectors.toList;
 
 
+
+
+
+
+
+
 public class Practice_Java {
     public static void main(String[] args) {
-        System.out.println("Dog");
+
+        String keywords = "Dog cat girl freak chair";
+        String querySearch = "";
         
-
-
-
-
-        // public String querySearch(String keywords) {
-        //     return "String";
-        // }
-
-
-
-    }
-}
+        for( int i = 0; i < keywords.length(); i++){
+            char check = keywords.charAt(i);
+            if( Character.isWhitespace(check)) {
+                querySearch += " OR ";
+            }
+            else{
+                querySearch += check;
+                System.out.println(querySearch);
+            }
+        }
+    }    
+    
+}    
 
 
 
