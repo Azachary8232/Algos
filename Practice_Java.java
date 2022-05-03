@@ -11,3 +11,15 @@ import static java.util.stream.Collectors.joining;
 import static java.util.stream.Collectors.toList;
 
 
+public class 4JAVA_Practice {
+    
+}
+
+
+
+public String querySearch(String keywords) {
+
+
+
+    return "String";
+}

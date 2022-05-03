@@ -14,3 +14,4 @@ console.log(mySet.has("dog"));
 console.log(mySet.has(105248));
 console.log(mySet.has(15));
 console.log(Array.from(mySet));
+
