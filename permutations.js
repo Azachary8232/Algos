@@ -1,7 +1,7 @@
 
 
 
-                    // Recursive
+                    //Permutations with Recursive        //Time: O(n!    Space: O(n^2))
 
 function permutations(elements){
     if (elements.length === 0){
@@ -26,4 +26,4 @@ function permutations(elements){
 
 
 
-console.log(permutations(['a','b','c']));
+console.log(permutations(['a','b','c','d']));
