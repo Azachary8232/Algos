@@ -1,6 +1,6 @@
 
 
-function binarySearch(arr, target) {        //Recursive Implementation
+function binarySearch(arr, target) {        //Recursive Implementation   Time: O(log(n))  Space: O(log(n))
     return binarySearchHelper(arr, target, 0, arr.length - 1);
 }
 
@@ -19,10 +19,9 @@ function binarySearchHelper(arr, target, left, right){
     else{
         return binarySearchHelper(arr, target, mid + 1, right);
     }
-
 }
 
-// function binarySearch(arr, target) {       //Iterive Implementation
+// function binarySearch(arr, target) {       //Iterive Implementation  Time: O(log(n)) Space: O(1)
 //     let left = 0;
 //     let right = arr.length - 1;
 
