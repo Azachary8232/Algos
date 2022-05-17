@@ -1,7 +1,20 @@
 import math
 
 
+def binarySearch(arr, target):
+    return binarySearchHelper(arr, target, 0, len(arr) - 1)
 
+
+def binarySearchHelper(arr, target, left, right):
+    if left > right:
+        return False
+    mid =  math.floor((left + right) / 2)
+    if target == arr[mid]:
+        return mid
+    elif target < arr[mid]:
+        return binarySearchHelper(arr, target, left, mid - 1)
+    else:
+        return binarySearchHelper(arr, target, mid + 1, right)
 
 
 
