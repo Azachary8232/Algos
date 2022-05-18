@@ -2,8 +2,8 @@
 
 
 class Node{
-    constructor(val){
-        this.val = val;
+    constructor(value){
+        this.value = value;
         this.next = null
     }
 }
@@ -14,9 +14,9 @@ class LinkedList{
         this.head = null;
     }
 
-    append(val){
+    append(value){
         if (this.head === null){
-            this.head = new Node(val);
+            this.head = new Node(value);
             return;
         }
         
@@ -24,14 +24,14 @@ class LinkedList{
         while (current.next !== null) {
             current = current.next;
         }
-        current.next = new Node(val)
+        current.next = new Node(value)
     }
 
     print(){
         let str = '';
         let current = this.head;
         while( current !== null){
-            str += current.val + ' -> ';
+            str += current.value + ' -> ';
             current = current.next;
         }
         console.log(str);
@@ -40,7 +40,7 @@ class LinkedList{
     contains(target) {
         let current = this.head;
         while( current !== null){
-            if (current.val === target){
+            if (current.value === target){
                 return true
             }
             current = current.next;
