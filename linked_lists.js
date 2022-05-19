@@ -104,10 +104,81 @@
 
                         // Singly Linked List Deletion
 
+// class Node{
+//     constructor(value){
+//         this.value = value;
+//         this.next = null;
+//     }
+// }
+
+// class LinkedList{
+//     constructor(){
+//         this.head = null
+//     }
+
+//     append(value){
+//         if(this.head === null){
+//             this.head = new Node(value);
+//             return
+//         }
+        
+//         let current = this.head;
+//         while(current.next !== null){
+//             current = current.next;
+//         }
+//         current.next = new Node(value);
+//     }
+
+//     print(){
+//         let str = '';
+//         let current = this.head
+//         if(this.head === null){
+//             return str
+//         }
+//         while(current !== null){
+//             str += current.value + " -> ";
+//             current = current.next;
+//         }
+
+//         return str
+//     }
+
+//     delete(target){
+//         let head = this.head
+//         if(head.value === target){
+//             this.head = head.next;
+//             return
+//         }
+//         let current = head;
+//         let previous = null
+//         while(current !== null){
+//             if(current.value === target){
+//                 previous.next = current.next;
+//                 return
+//             }
+//             previous = current;
+//             current = current.next;
+//         }
+//     }
+// }
+
+// const list = new LinkedList();
+// list.append('a');
+// list.append('b');
+// list.append('c');
+// list.append('d');
+// list.delete('d')
+// // console.log(list.head)
+// console.log(list.print());
+
+
+
+                                    //Singly Linked List Reversal
+
 class Node{
     constructor(value){
         this.value = value;
-        this.next = null;
+        this.next = null
     }
 }
 
@@ -121,15 +192,32 @@ class LinkedList{
             this.head = new Node(value);
             return
         }
-        
-        let current = this.head;
+        let current = this.head
         while(current.next !== null){
             current = current.next;
         }
         current.next = new Node(value);
     }
 
-    print(){
+    reverseNode(){
+        let current = this.head
+        let previous = null
+        
+        if(current.next === null){
+            return current
+        }
+        while(current.next !== null){
+            const next = current.next
+            current.next = previous;
+            previous = current;
+            current = next;
+        }
+        current.next = previous;
+        this.head = current
+        return this.head
+    }
+
+        print(){
         let str = '';
         let current = this.head
         if(this.head === null){
@@ -143,30 +231,15 @@ class LinkedList{
         return str
     }
 
-    delete(target){
-        let head = this.head
-        if(head.value === target){
-            this.head = head.next;
-            return
-        }
-        let current = head;
-        let previous = null
-        while(current !== null){
-            if(current.value === target){
-                previous.next = current.next;
-                return
-            }
-            previous = current;
-            current = current.next;
-        }
-    }
 }
+
+
 
 const list = new LinkedList();
 list.append('a');
 list.append('b');
 list.append('c');
 list.append('d');
-list.delete('d')
-// console.log(list.head)
+
+list.reverseNode();
 console.log(list.print());
