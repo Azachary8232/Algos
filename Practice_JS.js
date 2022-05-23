@@ -27,14 +27,16 @@ class LinkedList{
 
     print(){
         let str = ""
-        if(this.head = null){
+        let current = this.head
+        if(this.head === null){
             return "empty list"
         }
-        current = this.head
-        while(current.next !== null){
+        while(current !== null){
             str += " -> " + current.value
+            current = current.next
         }
-        str += current.value
+        return str
+
     }
 }
 
@@ -45,4 +47,5 @@ list.append(1)
 list.append(3)
 list.append(8)
 
-console.log(list)
+console.log(list.print())
+
