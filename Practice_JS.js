@@ -1,51 +1,62 @@
 
 
-class Node{
-    constructor(value){
-        this.value = value
-        this.next = null
+function LongestWord(sen) { 
+    let count = 0
+    let longWord = ""
+    let currentWord = ""
+    for(let i = 0; i < sen.length; i++){
+        let char = sen[i]
+        if( char >= "a" && char <= "z" || char >= "A" && char <= "Z"){
+            currentWord += sen[i] 
+        }
+        else if(sen[i] == " " || i + 1 == sen.length){
+            if( currentWord.length > longWord.length){
+                console.log("tiger")
+                // longWord = currentWord;
+                // currentWord = ""
+            }
+            else{
+                currentWord = ""
+            }
+        }
+        else{
+            console.log("donkey")
+        }
     }
+        
+
+
+
+
+
+        // if(sen[i] != " " || i + 1 != sen.length){
+        //     let char = sen[i]
+        //     if( char >= "a" && char <= "z" || char >= "A" && char <= "Z"){
+        //         currentWord += sen[i] 
+        //         console.log(currentWord)
+        //     }
+        //     else{
+        //         continue
+        //     }
+        // }        
+        // else{
+        //     console.log(currentWord + " space")
+        //     if( currentWord.length > longWord.length){
+        //         longWord = currentWord;
+        //         currentWord = ""
+        //     }
+        //     else{
+        //         console.log(currentWord + "1")
+        //         currentWord = ""
+        //         console.log(currentWord + "2")
+        //     }
+        // }
+
+    // code goes here  
+    return longWord; 
+
 }
 
-class LinkedList{
-    constructor(){
-        this.head = null
-    }
-
-    append(value){
-        if(this.head === null){
-            this.head = new Node(value)
-            return
-        }
-        let current = this.head
-        while(current.next !== null){
-            current = current.next
-        }
-        current.next = new Node(value) 
-        return
-    }
-
-    print(){
-        let str = ""
-        let current = this.head
-        if(this.head === null){
-            return "empty list"
-        }
-        while(current !== null){
-            str += " -> " + current.value
-            current = current.next
-        }
-        return str
-
-    }
-}
 
 
-list = new LinkedList()
-list.append(5)
-list.append(1)
-list.append(3)
-list.append(8)
-
-console.log(list.print())
-
+console.log(LongestWord("fun&!! time"))
