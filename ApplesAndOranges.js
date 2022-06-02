@@ -3,12 +3,16 @@
 
 
 function countApplesAndOranges(s, t, a, b, apples, oranges) {
-    console.log(s);
-    console.log(t);
-    console.log(a);
-    console.log(b);
-    console.log(apples);
-    console.log(oranges);
+    let appleCount = 0;
+    let orangeCount = 0;
+
+    for( distance in apples){
+        if( distance + a > s && distance + a < t){
+            appleCount ++
+        }
+    }
+
+    console.log(appleCount);
 
 }
 
