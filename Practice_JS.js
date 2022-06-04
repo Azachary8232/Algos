@@ -1,62 +1,22 @@
 
 
-function LongestWord(sen) { 
-    let count = 0
-    let longWord = ""
-    let currentWord = ""
-    for(let i = 0; i < sen.length; i++){
-        let char = sen[i]
-        if( char >= "a" && char <= "z" || char >= "A" && char <= "Z"){
-            currentWord += sen[i] 
-        }
-        else if(sen[i] == " " || i + 1 == sen.length){
-            if( currentWord.length > longWord.length){
-                console.log("tiger")
-                // longWord = currentWord;
-                // currentWord = ""
-            }
-            else{
-                currentWord = ""
-            }
-        }
-        else{
-            console.log("donkey")
-        }
-    }
-        
+const letters = new Set;
+
+letters.add(1);
+letters.add("a");
+letters.add(true);
+letters.add(56);
+
+console.log(letters);
+
+let a = "variable A";
+
+letters.add("here")
+letters.add(true)
+letters.add(a)
+
+console.log(letters);
+console.log(letters.values());
+console.log(Array.from(letters));
 
 
-
-
-
-        // if(sen[i] != " " || i + 1 != sen.length){
-        //     let char = sen[i]
-        //     if( char >= "a" && char <= "z" || char >= "A" && char <= "Z"){
-        //         currentWord += sen[i] 
-        //         console.log(currentWord)
-        //     }
-        //     else{
-        //         continue
-        //     }
-        // }        
-        // else{
-        //     console.log(currentWord + " space")
-        //     if( currentWord.length > longWord.length){
-        //         longWord = currentWord;
-        //         currentWord = ""
-        //     }
-        //     else{
-        //         console.log(currentWord + "1")
-        //         currentWord = ""
-        //         console.log(currentWord + "2")
-        //     }
-        // }
-
-    // code goes here  
-    return longWord; 
-
-}
-
-
-
-console.log(LongestWord("fun&!! time"))
