@@ -14,26 +14,41 @@ function kangaroo(x1, v1, x2, v2){
     let positionK1 = x1;
     let positionK2 = x2;
     let longestJumper;
+    let shortPostion;
 
     if( v1 > v2){
-        longestJumper = v1;
+        longestJumper = positionK1;
+        shortPostion = positionK2
     }
     else{
-        longestJumper = v2;
+        longestJumper = positionK2;
+        shortPostion = positionK1;
     }
 
     let jump = 0;
 
-    while( (longestJumper == v1 && x1 < x2) || (longestJumper == v2 && x2 < x1)){
+    while( longestJumper < shortPostion){
+        
         console.log("running");
         positionK1 += v1;
         positionK2 += v2;
 
+        if( v1 > v2){
+            longestJumper = positionK1;
+            shortPostion = positionK2
+        }
+        else{
+            longestJumper = positionK2;
+            shortPostion = positionK1;
+        }
+    
+
         if(positionK1 == positionK2){
-            return "yes";
+            return "YES";
         }
 
     }
+    return "NO";
 
 }
 
