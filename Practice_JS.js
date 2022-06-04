@@ -1,22 +1,19 @@
 
 
-const letters = new Set;
+const letters = new Map;
 
-letters.add(1);
-letters.add("a");
-letters.add(true);
-letters.add(56);
+letters.set("apples", 500);
+letters.set("bananas", 300);
+letters.set("oranges", 200);
+letters.set("dogs", 10);
 
-console.log(letters);
-
-let a = "variable A";
-
-letters.add("here")
-letters.add(true)
-letters.add(a)
 
 console.log(letters);
-console.log(letters.values());
-console.log(Array.from(letters));
+
+
+
+// console.log(letters.get(apples));
+// console.log(letters.values());
+// console.log(letters.keys());
 
 
