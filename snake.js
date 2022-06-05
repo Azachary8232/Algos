@@ -13,6 +13,21 @@ class Snake{
         ];
     }
 
+    move(direction) {
+        const delta = {
+            up: [-1, 0],
+            down: [1, 0],
+            left: [0, -1],
+            right: [0, 1]
+        };
+        const currentHead = this.snakeBody[this.snakeBody.length-1];
+        const [ currRow, currCol ] = currentHead;
+        const [ changeRow, changeCol ] = delta[direction];
+        const newHead = [ currRow + changeRow, currCol + changeCol ];
+        this.snakeBody.push(newHead);
+        this.snakeBody.shift();
+    }
+
     draw() {
         const grid = [];
         for( let i = 0; i < 10; i++){
@@ -22,8 +37,13 @@ class Snake{
             }
             grid.push(row)
         }
+
+        this.snakeBody.forEach(pos => {
+            const [row, col] = pos;
+            grid[row][col] = 'o';
+        });
+
         grid.forEach(row => console.log(row.join('|')))
-        console.log(grid)
     }
 }
 
