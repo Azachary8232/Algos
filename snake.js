@@ -43,6 +43,7 @@ class Snake{
             grid[row][col] = 'o';
         });
 
+        console.clear();
         grid.forEach(row => console.log(row.join('|')))
     }
 
@@ -58,6 +59,7 @@ class Snake{
             if (keypress === "d") this.move('right');
             if (keypress === "\u0003") process.exit();
 
+            this.draw();
         });
     }
 }
