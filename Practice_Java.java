@@ -35,19 +35,17 @@ class Result{
 
 public class Practice_Java {
     public static void main(String[] args) {
-        ArrayList<Integer> newArry = new ArrayList<>();
-        newArry.add(1);
-        newArry.add(2);
-        newArry.add(3);
-        newArry.add(4);
-        newArry.add(3);
-        newArry.add(2);
-        newArry.add(1);
-
-
-    System.out.println(Result.lonelyinteger(newArry));
+        ArrayList<String> cars = new ArrayList<String>();
+        cars.add("Volvo");
+        cars.add("BMW");
+        cars.add("Ford");
+        cars.add("Mazda");
+        for (String i : cars) {
+        System.out.println(i);
     }    
-
+        System.out.println(cars.contains("Mazda"));
+        System.out.println(cars.contains("Dog"));
+    }
 }    
 
 
