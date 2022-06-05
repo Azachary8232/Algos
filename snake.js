@@ -56,15 +56,17 @@ class Snake{
             if (keypress === "a") this.move('left');
             if (keypress === "s") this.move('down');
             if (keypress === "d") this.move('right');
+            if (keypress === "\u0003") process.exit();
+
         });
     }
 }
 
 const game = new Snake();
-game.draw();
-console.log('----');
-game.move('up');
-game.draw();
-console.log('----');
-game.move('right');
-game.draw();
+// game.draw();
+// console.log('----');
+// game.move('up');
+// game.draw();
+// console.log('----');
+// game.move('right');
+// game.draw();
