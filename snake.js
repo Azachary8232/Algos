@@ -65,10 +65,4 @@ class Snake{
 }
 
 const game = new Snake();
-// game.draw();
-// console.log('----');
-// game.move('up');
-// game.draw();
-// console.log('----');
-// game.move('right');
-// game.draw();
+game.play();
