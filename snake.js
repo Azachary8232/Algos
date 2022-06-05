@@ -45,7 +45,26 @@ class Snake{
 
         grid.forEach(row => console.log(row.join('|')))
     }
+
+    play() {
+        const stdin = process.stdin;
+        stdin.setRawMode(true);
+        stdin.resume();
+        stdin.setEncoding("utf8");
+        stdin.on("data", (keypress) => {
+            if (keypress === "w") this.move('up');
+            if (keypress === "a") this.move('left');
+            if (keypress === "s") this.move('down');
+            if (keypress === "d") this.move('right');
+        });
+    }
 }
 
 const game = new Snake();
+game.draw();
+console.log('----');
+game.move('up');
+game.draw();
+console.log('----');
+game.move('right');
 game.draw();
