@@ -1,19 +1,29 @@
 
 
-const letters = new Map;
+var solution = function(isBadVersion) {
+    /**
+     * @param {integer} n Total versions
+     * @return {integer} The first bad version
+     */
+    return function(n) {
 
-letters.set("apples", 500);
-letters.set("bananas", 300);
-letters.set("oranges", 200);
-letters.set("dogs", 10);
-
-
-console.log(letters);
-
-
-
-// console.log(letters.get(apples));
-// console.log(letters.values());
-// console.log(letters.keys());
-
-
+        let left = 0;
+        let right = n;
+        
+        while(left + 1 != right){
+            console.log(left);
+            console.log(right);
+            let mid = Math.floor((left + right) / 2);
+            console.log(mid)
+            if(isBadVersion(mid) === false){
+                left = mid;
+                
+            } 
+            else if(isBadVersion(mid) === true){
+                right = mid;
+            }
+            console.log("space")  
+        }
+        return right;
+    };
+};
